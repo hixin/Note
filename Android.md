@@ -49,7 +49,7 @@ wal不是传统的日志文件。 相反，数据库的一些提交会附加到w
 
 https://baijiahao.baidu.com/s?id=1626599028653203490&wfr=spider&for=pc
 
-![img](https://pics3.baidu.com/feed/1b4c510fd9f9d72ab60c3af13e6e5830359bbbbf.jpeg?token=2d144f5a8eaffc33e6a662d162698007&s=E190E1331F1C55C8465D6CDA0100E0B3)
+![img](images/E190E1331F1C55C8465D6CDA0100E0B3.png)
 
  GET 用于获取信息，是无副作用的，是幂等的，且可缓存
 
@@ -57,7 +57,7 @@ https://baijiahao.baidu.com/s?id=1626599028653203490&wfr=spider&for=pc
 
 *幂等*操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同
 
-![img](https://pics7.baidu.com/feed/b3119313b07eca805fa1da517667e7d9a04483ad.jpeg?token=769f7e081452afbe924b04c409cf0c08&s=0558C1324952C0CE0AEDF4DF030010B2)
+![img](images/0558C1324952C0CE0AEDF4DF030010B2.png)
 
 REST API 又进一步细化
 
@@ -95,7 +95,7 @@ Delete      DELETE
 
 <https://www.cnblogs.com/andashu/p/6441271.html>
 
-![img](https://images2015.cnblogs.com/blog/1090298/201702/1090298-20170225110614929-1968350403.jpg)
+![img](images/1090298-20170225110614929-1968350403.png)
 
 1. Persistent Connection（keep-alive连接）
    允许HTTP设备在事务处理结束之后将TCP连接保持在打开的状态，以便未来的HTTP请求重用已有的TCP链接(但是对每个请求仍然要单独发 header)，直到客户端或服务器端决定将其关闭为止。
@@ -108,7 +108,7 @@ Delete      DELETE
 
      
 
-![img](https://images2015.cnblogs.com/blog/1090298/201702/1090298-20170225110733726-609742802.jpg)
+![img](images/1090298-20170225110733726-609742802.png)
 
 2. chunked编码传输
 
@@ -118,7 +118,7 @@ Delete      DELETE
 
 4. Pipelining（请求流水线）  不等得到响应就发起下一个请求
 
-![img](https://images2015.cnblogs.com/blog/1090298/201702/1090298-20170225110825413-1215050354.png)
+![img](images/1090298-20170225110825413-1215050354.png)
 
 关于keep alive
 
@@ -131,7 +131,7 @@ TCP的KeepAlive机制意图在于保活、心跳，检测连接错误
 
 tcp的keepalive是在ESTABLISH状态的时候，双方如何检测连接的可用行。而http的keep-alive说的是如何避免进行重复的TCP三次握手和四次挥手的环节。
 
-![img](https://images0.cnblogs.com/i/592959/201407/170853222245220.jpg)
+![img](images/170853222245220.png)
 
 
 
@@ -214,7 +214,7 @@ tcp的keepalive是在ESTABLISH状态的时候，双方如何检测连接的可�
 
 正常情况下, 需要先用copy_from_user 拷贝到内核空间, 再用copy_to_user 拷贝到另一个用户空间,  为了实现用户空间到用户空间的直接拷贝,  **mmap把Binder在内核空间的数据直接通过指针地址映射到用户空间, 所以调用copy_from_user 将数据拷贝进内核空间也就相当于拷贝进了接收方的用户空间**.
 
-![Binderä¸æ¬¡æ·è´åç.jpg](http://upload-images.jianshu.io/upload_images/1460468-1f61b4f411c35094.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Binder.jpg](images/1460468-1f61b4f411c35094.jpg)
 
 
 
@@ -231,7 +231,7 @@ tcp的keepalive是在ESTABLISH状态的时候，双方如何检测连接的可�
 public static final String VIBRATOR_SERVICE = "vibrator";
 ```
 
-![binder_overview](http://hi.csdn.net/attachment/201102/27/0_1298798582y7c5.gif)
+![binder_overview](images/0_1298798582y7c5.png)
 
 
 
@@ -255,9 +255,9 @@ MessageQueue 其实是Message的管理类, Message是一个链表结构,  Messag
 
 <https://blog.csdn.net/carson_ho/article/details/54136311>
 
-![ç¤ºæå¾](http://upload-images.jianshu.io/upload_images/944365-aea821bbb613c195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
+![944365-aea821bbb613c195](images/944365-aea821bbb613c195.png)
 
 ### 6.onSaveInstanceState()
 
