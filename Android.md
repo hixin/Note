@@ -223,6 +223,50 @@ tcp的keepalive是在ESTABLISH状态的时候，双方如何检测连接的可�
 
 事实上，虚引用有一个很重要的用途就是用来做堆外内存的释放，DirectByteBuffer就是通过虚引用来实现堆外内存的释放的。
 
+### 3.反射
+
+把java类中的各成分映射成一个个java对象， Method， Filed
+
+```
+Class rc = Class.forName("");
+Robot r = (Robot)rc.newInstance();
+Method getHello = rc.getDeclaredMethod("", String.class);
+getHello.setAccessible(true);
+getHello.invoke(r, "bob")；
+
+Filed name = rc.getDeclaredField("name");
+name.setAccessible(true);
+name.set(r, "Alice");
+
+```
+
+getDeclaredMethod 所有方法， 不能获取继承和接口的方法
+
+getMethod 只能获取公共方法， 包括继承和接口方法
+
+### 4.类加载
+
+双亲委派机制
+
+1. 自底向上检查类是否已经加载
+2. 自顶向下尝试加载类
+
+类加载方式
+
+- 隐式加载： new
+
+- 显式加载： loadClass， forName等   都是先获取类对象，再生成对象实例
+
+  forName 加载，链接，初始化(执行类变量赋值和静态代码块)
+
+  loadClass 不会进行类初始化
+
+### 5.Java内存模型
+
+线程私有： 程序计数器， 虚拟机栈， 本地方法栈
+
+线程共享：MetaSapce， Java堆
+
 ## Android相关
 
 ### 1.双指缩放如何实现
